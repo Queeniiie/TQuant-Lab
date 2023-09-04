@@ -1,0 +1,110 @@
+.newsCard {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  gap: 24px;
+  width: 60vw;
+  max-width: 864px;
+  height: 220px;
+
+  @media (max-width: 1200px) {
+    width: 80vw;
+    max-width: unset;
+    height: 150px;
+  }
+
+  @media (max-width: 520px) {
+    width: 90vw;
+  }
+
+  > .date {
+    display: flex;
+    flex-direction: column;
+
+    > span {
+      text-align: center;
+      font-family: Arial Black;
+      font-size: 24px;
+      font-weight: 900;
+      letter-spacing: -1px;
+      background: linear-gradient(90deg, #aaa 0%, #bfd4c6 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      @media (max-width: 1200px) {
+        font-size: 22px;
+      }
+
+      &.year {
+        font-size: 16px;
+
+        @media (max-width: 1200px) {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  > .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 8%;
+    height: 100%;
+    border-radius: 40px;
+    border: 1px solid rgba(250, 250, 250, 0.1);
+    background: linear-gradient(
+      97deg,
+      rgba(235, 235, 235, 0.66) 0%,
+      rgba(235, 235, 235, 0.82) 52.08%,
+      rgba(255, 255, 255, 0.74) 100%,
+      rgba(235, 235, 235, 0.66) 100%
+    );
+
+    @media (max-width: 1200px) {
+      border-radius: 24px;
+    }
+
+    > h5 {
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: #162338;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1.25;
+      letter-spacing: 0.7px;
+
+      @media (max-width: 1200px) {
+        font-size: 20px;
+      }
+    }
+
+    > .hr {
+      margin: 8px 0;
+      width: 100%;
+      height: 1px;
+      background: black;
+    }
+
+    > p {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-align: justify;
+      color: #162338;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.8;
+
+      @media (max-width: 1200px) {
+        font-size: 14px;
+      }
+    }
+  }
+}

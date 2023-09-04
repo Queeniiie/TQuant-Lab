@@ -1,0 +1,15 @@
+.sectionTitle {
+  text-align: center;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.5px;
+  background: linear-gradient(90deg, #bdcde5 0%, #bde5cb 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  @media (max-width: 1200px) {
+    font-size: 32px;
+  }
+}

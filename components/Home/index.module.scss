@@ -1,0 +1,468 @@
+.ani {
+  z-index: -1;
+
+  > .circle {
+    border-radius: 100%;
+    position: absolute;
+    animation: moveCircle 10s linear infinite; /* 10s 是动画持续时间，你可以调整它以改变动画速度 */
+
+    &.purple {
+      width: 78vw;
+      height: 78vw;
+      background: #24395b;
+      filter: blur(7vw);
+      animation-delay: 0s;
+    }
+
+    &.yellow {
+      width: 20vw;
+      height: 20vw;
+      background: #9f7c5c;
+      filter: blur(10.5vw);
+      animation-delay: 2.5s; /* 延迟开始第二个圆的动画 */
+    }
+
+    &.skyblue {
+      width: 80vw;
+      height: 80vw;
+      background: #244e5b;
+      filter: blur(8.5vw);
+      animation-delay: 5s; /* 延迟开始第三个圆的动画 */
+    }
+
+    &.blue {
+      width: 60vw;
+      height: 60vw;
+      background: #334156;
+      filter: blur(7vw);
+      animation-delay: 7.5s; /* 延迟开始第四个圆的动画 */
+    }
+  }
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  > .title {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+
+    > .dialogBoxPattern {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+
+      > img {
+        width: 100%;
+        height: auto;
+      }
+
+      > h3 {
+        position: absolute;
+        color: #d9d9d9;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 1.25;
+
+        @media (max-width: 1200px) {
+          font-size: 16px;
+        }
+      }
+
+      &.one {
+        top: calc(-128px - 10px);
+        width: 262px;
+
+        @media (max-width: 1200px) {
+          top: calc(-74px - 10px);
+          width: 150px;
+        }
+
+        > h3 {
+          top: 45px;
+
+          @media (max-width: 1200px) {
+            top: 24px;
+          }
+        }
+      }
+
+      &.two {
+        top: calc(-124px - 10px);
+        right: -54px;
+        width: 242px;
+
+        @media (max-width: 1200px) {
+          top: calc(-72px - 10px);
+          right: -24px;
+          width: 140px;
+        }
+
+        > h3 {
+          top: 41.5px;
+
+          @media (max-width: 1200px) {
+            top: 24px;
+          }
+        }
+      }
+
+      &.three {
+        bottom: calc(-102px - 124px);
+        right: -32px;
+        width: 242px;
+
+        @media (max-width: 1200px) {
+          bottom: calc(-72px - 40px);
+          right: -12px;
+          width: 140px;
+        }
+
+        > h3 {
+          top: 49px;
+
+          @media (max-width: 1200px) {
+            top: 28px;
+          }
+        }
+      }
+    }
+
+    > .logo {
+      margin-right: 52px;
+      width: 170px;
+      height: auto;
+
+      @media (max-width: 1200px) {
+        margin-right: 16px;
+        width: 80px;
+      }
+
+      @media (max-width: 520px) {
+        margin-right: 8px;
+        width: 50px;
+      }
+    }
+
+    > h1 {
+      font-size: 80px;
+      font-weight: 900;
+      line-height: 1.1;
+      color: #bdcde5;
+
+      @media (max-width: 1200px) {
+        font-size: 40px;
+      }
+
+      @media (max-width: 520px) {
+        font-size: 24px;
+      }
+
+      > span {
+        background: linear-gradient(90deg, #55c7ce 0%, #c0cf64 51.04%, #41c59a 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+
+  > .nextPage {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 15%;
+    margin: auto;
+    width: 80px;
+    height: 80px;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent; /* for removing the highlight */
+
+    @media (max-width: 1200px) {
+      width: 60px;
+      height: 60px;
+    }
+
+    @media (max-width: 520px) {
+      width: 40px;
+      height: 40px;
+    }
+
+    > img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.news {
+  padding: 120px 0;
+  display: grid;
+  justify-items: center;
+  gap: 6%;
+
+  @media (max-width: 1200px) {
+    padding: 60px 0;
+    align-content: flex-start;
+    gap: 40px;
+  }
+}
+
+.features {
+  z-index: -1;
+  display: flex;
+
+  > div {
+    padding: 120px 0;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    align-items: center;
+    gap: 40px;
+    margin: auto;
+    width: 60vw;
+    max-width: 864px;
+    height: 100%;
+
+    @media (max-width: 1200px) {
+      padding: 60px 0;
+      gap: 20px;
+      width: 80vw;
+      max-width: unset;
+    }
+
+    @media (max-width: 520px) {
+      width: 90vw;
+    }
+
+    > .title {
+      > h2 {
+        color: #fafafa;
+        font-size: 56px;
+        font-weight: 400;
+        line-height: 1.25;
+
+        @media (max-width: 1200px) {
+          font-size: 36px;
+        }
+
+        @media (max-width: 520px) {
+          font-size: 24px;
+        }
+
+        > span {
+          font-family: Play;
+        }
+      }
+
+      > .hr {
+        margin: 64px 0;
+        width: 100%;
+        height: 2px;
+        background-color: #999;
+
+        @media (max-width: 1200px) {
+          margin: 40px 0;
+        }
+
+        @media (max-width: 520px) {
+          margin: 20px 0;
+        }
+      }
+
+      > .content {
+        > p {
+          color: #999;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 2;
+          letter-spacing: 0.6px;
+
+          @media (max-width: 1200px) {
+            font-size: 14px;
+          }
+
+          @media (max-width: 520px) {
+            font-size: 12px;
+          }
+        }
+
+        > button {
+          margin-top: 40px;
+          padding: 0 16px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 164px;
+          height: 64px;
+          border-radius: 52px;
+          border: 1px solid #999;
+          background-color: inherit;
+
+          color: #999;
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 1.25;
+          letter-spacing: 0.48px;
+
+          @media (max-width: 1200px) {
+            margin-top: 20px;
+            padding: 0 8px;
+            width: 120px;
+            height: 40px;
+
+            font-size: 14px;
+          }
+
+          @media (max-width: 520px) {
+            margin-top: 12px;
+            width: 80px;
+            height: 32px;
+
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    > .list {
+      height: 100%;
+      display: grid;
+      gap: 20px;
+
+      @media (max-width: 1200px) {
+        align-content: center;
+      }
+
+      > div {
+        &:first-child {
+          margin-left: calc((100% - 280px) / 2);
+
+          @media (max-width: 1200px) {
+            margin-left: unset;
+          }
+        }
+
+        &:last-child {
+          margin-left: calc(100% - 280px);
+
+          @media (max-width: 1200px) {
+            margin-left: unset;
+          }
+        }
+      }
+    }
+  }
+}
+
+.introduce {
+  > div {
+    background-color: black;
+    padding: 200px 0 100px;
+
+    @media (max-width: 1200px) {
+      padding: 60px 0;
+    }
+
+    > * {
+      width: 60vw;
+      max-width: 864px;
+      margin: auto;
+
+      @media (max-width: 1200px) {
+        width: 80vw;
+        max-width: unset;
+      }
+
+      @media (max-width: 520px) {
+        width: 90vw;
+      }
+    }
+
+    > h3,
+    h5 {
+      color: #fafafa;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+
+    > h3 {
+      margin-top: 42px;
+      font-size: 24px;
+      letter-spacing: 0.36px;
+
+      @media (max-width: 1200px) {
+        font-size: 18px;
+        margin-top: 24px;
+      }
+
+      @media (max-width: 520px) {
+        font-size: 16px;
+        margin-top: 16px;
+      }
+    }
+
+    > h5 {
+      margin-top: 48px;
+      font-size: 16px;
+
+      @media (max-width: 1200px) {
+        font-size: 14px;
+        margin-top: 28px;
+      }
+
+      @media (max-width: 520px) {
+        font-size: 12px;
+        margin-top: 20px;
+      }
+    }
+
+    > .list {
+      margin: 75px auto;
+      display: grid;
+      gap: 48px;
+
+      @media (max-width: 1200px) {
+        margin: 40px auto;
+        gap: 24px;
+      }
+
+      @media (max-width: 520px) {
+        margin: 24px auto;
+        gap: 12px;
+      }
+    }
+  }
+}
+
+.application {
+  width: 100%;
+  background-color: white;
+}
+
+.join {
+  width: 100%;
+  background: #202227;
+}
+
+@keyframes moveCircle {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(50vw, 0);
+  }
+  50% {
+    transform: translate(50vw, 50vh);
+  }
+  75% {
+    transform: translate(0, 50vh);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
